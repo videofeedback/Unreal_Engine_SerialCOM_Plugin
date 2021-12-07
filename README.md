@@ -78,6 +78,12 @@ For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugi
 [![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_opening_port_example.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_opening_port_example.png)
 
 
+
+## Blueprint Example
+
+[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example.png)
+
+
 -----------------------------------------------------------------------------------------------------
 Ramiro Montes De Oca (Ramiro's Lab)
 Discord: https://discord.ramiroslab.com

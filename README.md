@@ -8,7 +8,7 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
 ## Download:
 
-Example 1 (https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/SERIALCOM/SERIALCOMUE425/SERIALCOM.zip)
+[Example 1](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/SERIALCOM/SERIALCOMUE425/SERIALCOM.zip)
 
 
 ### "Serial COM" v3.0.0 (Beta) RELEASE NOTES

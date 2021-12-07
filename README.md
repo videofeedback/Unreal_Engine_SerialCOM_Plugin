@@ -28,13 +28,13 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 	- Flash Port 				- Flash Serial Port
 	- Open Port 				- Open Serial Port
 	- ----------				- (New) Open Serial Port with Flow Control
-	- Open Port with Target		- (New) Open Serial Port with Target and Flow Control
+	- Open Port with Target			- (New) Open Serial Port with Target and Flow Control
 	- Get Port Number			- Get Serial Port Number
 	- Get Port Baudrate			- Get Serial Port Baudrate
 	- Serial Port Open			- Is Serial Port Open?
-	- Print 					- Serial Print
+	- Print 				- Serial Print
 	- Print Line				- Serial Print Line
-	- Line End to String		- Serial Line End to String
+	- Line End to String			- Serial Line End to String
 	- Write a Byte				- Serial Write Byte
 	- Write Bytes				- Serial Write Bytes
 	- Read a Bytes				- Serial Read Byte

@@ -104,7 +104,10 @@ Github: https://github.ramiroslab.com
 
 ----------------------------------------------------------------------------------------------------
 Copyright (c) 2015 v1 FusionLabz/Gryzly32 (UE4Duino)
+
 Copyright (c) 2018-2020 v2 Rodrigo Villani Pereira (UE4Duino)
+
 Copyright (c) 2021-2022 v3 Ramiro Montes De Oca (SerialCOM) fork of (UE4Duino 2.2.5)
+
 
   

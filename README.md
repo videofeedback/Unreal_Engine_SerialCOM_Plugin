@@ -16,17 +16,6 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
 [Plugin for Unreal Engine 5.0 EA (With Blueprint Example) ](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/SERIALCOM/SERIALCOMUE5EA/SERIALCOM.zip)
 
-### "Serial COM" v3.0.0 (Beta) RELEASE NOTES
-
-- The "Serial COM" 3.0.0 Plugin now works nativelley in Unreal Engine 4.27/4.26/4.24 (PARTIAL SUPPORT WITH UE 5EA*) without having to re-build the project and possibly not be able to re-build for the lack of missing SDK's requirements. 
-* Unreal Engine 5(Early Access) still requires to rebuild the plugin. UE5 is able to rebuild the plugin. Until a new method to rebuild the plugin for UE5 is available, this is the only version compatible with UE5.
-
-- The new plugin will appear in your plugin list as "Communication Serial Port (Serial COM)". On your blueprints, is going to be listed in the "Communication Serial" category list instead of "UE4Duino". Search for "Arduino, Serial, Communication" will also show the results for these functions. 
-
-- Added Flow Control from the last UE4Duino 2.2.5's Pull request from "SG1EmberWolf"(https://github.com/SG1EmberWolf) 
-	- Added "Open Serial Port with Flow Control"
-	- Added "Open Serial Port with Target and Flow Control"
-
 
 [![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_list_of_functions.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_list_of_functions.png)
 
@@ -57,6 +46,18 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 	- Float to Bytes			- Serial Float to Bytes
 	- Int to Bytes				- Serial Int to Bytes
   
+  
+  
+### "Serial COM" v3.0.0 (Beta) RELEASE NOTES
+
+- The "Serial COM" 3.0.0 Plugin now works nativelley in Unreal Engine 4.27/4.26/4.24 (PARTIAL SUPPORT WITH UE 5EA*) without having to re-build the project and possibly not be able to re-build for the lack of missing SDK's requirements. 
+* Unreal Engine 5(Early Access) still requires to rebuild the plugin. UE5 is able to rebuild the plugin. Until a new method to rebuild the plugin for UE5 is available, this is the only version compatible with UE5.
+
+- The new plugin will appear in your plugin list as "Communication Serial Port (Serial COM)". On your blueprints, is going to be listed in the "Communication Serial" category list instead of "UE4Duino". Search for "Arduino, Serial, Communication" will also show the results for these functions. 
+
+- Added Flow Control from the last UE4Duino 2.2.5's Pull request from "SG1EmberWolf"(https://github.com/SG1EmberWolf) 
+	- Added "Open Serial Port with Flow Control"
+	- Added "Open Serial Port with Target and Flow Control"
   
   - The new module name changed from "UE4Duino" to "SERIALCOM". That also means that both plugins (potentially) can live together inside a blueprint without causing conflicts, but is not recommended.
 

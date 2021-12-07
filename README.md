@@ -86,8 +86,11 @@ For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugi
 
 -----------------------------------------------------------------------------------------------------
 Ramiro Montes De Oca (Ramiro's Lab)
+
 Discord: https://discord.ramiroslab.com
+
 YouTube: https://youtube.ramiroslab.com
+
 Github: https://github.ramiroslab.com
 
 ----------------------------------------------------------------------------------------------------

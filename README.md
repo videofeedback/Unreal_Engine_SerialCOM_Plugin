@@ -15,10 +15,9 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 	- Added "Open Serial Port with Target and Flow Control"
 
 
-- Renamed Functions:
-
-	UE4Duino v2.2.5				Serial COM v 3.0.0	
+### Renamed Functions:
 -----------------------------------------------------------------------------------
+	UE4Duino v2.2.5				Serial COM v 3.0.0
 	- Close Port 				- Close Serial Port
 	- Flash Port 				- Flash Serial Port
 	- Open Port 				- Open Serial Port

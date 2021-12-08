@@ -2,15 +2,9 @@
 Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
 ## "Serial COM" v3.0.0.05 (Beta) RELEASE NOTES
---------------------------------------------------------------
 
 - Small but significant change. Internally changed the function from "USerial" to "USerialCom" to avoid problems if another UE4Duino plugin is running at the same time. This change makes is to avoid any conflict with old functions and corruption of plugins.
 
-## "Serial COM" v3.0.04 (Beta) (Fork of UE4Duino)
-
---------------------------------------------------------------
-
-- Small but significant change. Internally changed the function from "USerial" to "USerialCom" to avoid problems if another UE4Duino plugin is running at the same time. This change makes is to avoid any conflict with old functions and corruption of plugins.
 
 ## "Serial COM" v3.0.04 (Beta) (Fork of UE4Duino)
 

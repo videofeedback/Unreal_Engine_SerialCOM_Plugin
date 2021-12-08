@@ -1,0 +1,32 @@
+{
+	"FileVersion":		3,
+
+	"FriendlyName":		"Communication Serial Port (Serial COM)",
+	"Version":			3,
+	"VersionName":		"3.0.0.05",
+	"CreatedBy":		"Ramiro Montes De Oca",
+	"CreatedByURL": "https://github.com/videofeedback/RamirosLab",
+	"DocsURL": "https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port",
+	"SupportURL": "https://discord.ramiroslab.com/",
+
+	"Description":		"This library enables Serial communication with Unreal Engine 4/5. Added DTR/RTS flow control. Compatible with Arduino projects and any other device requiring Serial Communication. This project was forked from EU4Duino (v1 Gryzly32/FuzionLabs, v2 Rodrigo Villani).
+Serial Com v3 by Ramiro Montes De Oca.",
+	
+	"Category":			"Input",
+	
+	"EnabledByDefault":	true,
+	"IsBetaVersion": true,
+
+
+	"Modules": [
+		{
+			"Name":					"SERIALCOM", 
+			"Type":					"Runtime",
+			"LoadingPhase":			"PreDefault",
+			"WhitelistPlatforms":	[
+				"Win32",
+				"Win64"
+			]
+		}
+	]
+}

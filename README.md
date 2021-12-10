@@ -15,6 +15,8 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
 [SerialCOM v3.0.0.5 Plugin for Unreal Engine 5.0 EA (With Blueprint Example) ](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/releases/download/SerialCOM_v3.0.0.5/SERIALCOM_UE5EA_r1.zip)
 
+-----------------------------------------------------------------------------
+
 ## "Serial COM" v3.0.0.4 (Beta) (Fork of UE4Duino)
 
 
@@ -98,6 +100,46 @@ For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugi
 Each Zip file contains the correstpondent blueprint for each UE version. Drag and drop the .uasset (Blueprint) file to your project. Read the complete insturctions inside the "BLUEPRINT" folder of this plugin.
 
 [![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example_01.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example_01.png)
+
+----------------------------------------------------------------------------------------------------------
+
+
+### Serial Communication Useful information:
+
+["Serial Communication" (Wikipedia)](https://en.wikipedia.org/wiki/Serial_communication)
+
+["Flow Control" (Wikipedia)](https://en.wikipedia.org/wiki/Flow_control_(data))
+
+["Software Flow Control (XON/XOFF)" (Wikipedia)](https://en.wikipedia.org/wiki/Software_flow_control)
+
+["Serial Communication" (Contec)](https://www.contec.com/support/basic-knowledge/daq-control/serial-communicatin/)
+
+["Serial Communication" (Sparkfun)](https://learn.sparkfun.com/tutorials/serial-communication/all)
+
+["Serial Communication" (Adafruit)](https://learn.adafruit.com/circuit-playground-express-serial-communications/what-is-serial-communications)
+
+["RS-232 vs TTL Serial Communication" (Sparkfun)](https://www.sparkfun.com/tutorials/215)
+
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+### Useful Lab Tools:
+
+["USB to TTL Serial Cable" (Sparkfun)](https://www.adafruit.com/product/954)
+
+["Arduino Uno Rev3" (Arduino.cc)](https://store-usa.arduino.cc/collections/boards/products/arduino-uno-rev3)
+
+["Arduino Mega Rev3" (Arduino.cc)](https://store-usa.arduino.cc/collections/boards/products/arduino-mega-2560-rev3)
+
+["Arduino Portenta H7 Lite Connected" (Arduino.cc)](https://store-usa.arduino.cc/collections/boards/products/portenta-h7-lite-connected)
+
+
+
+
+
 
 
 -----------------------------------------------------------------------------------------------------

@@ -19,7 +19,7 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
 [SerialCOM v3.0.0.5 Plugin for Unreal Engine 5.0 EA (With Blueprint Example) ](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/releases/download/SerialCOM_v3.0.0.5/SERIALCOM_UE5EA_r1.zip)
 
-[SerialCOM v3.0.0.6 Plugin for Unreal Engine 5.0.3 EA (With Blueprint Example) ](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v3.0.0.6/SERIALCOM_UE50301.zip)
+[SerialCOM v3.0.0.6 Plugin for Unreal Engine 5.0.3 (With Blueprint Example) ](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v3.0.0.6/SERIALCOM_UE50301.zip)
 
 
 

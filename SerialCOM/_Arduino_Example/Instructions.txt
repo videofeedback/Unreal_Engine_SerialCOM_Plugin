@@ -1,0 +1,15 @@
+Simple Arduino program:
+
+Arduino:
+Analog to Digital:
+- Test an analog signal on A0
+- Read the sensor value(0-1023)
+- Map the sensor range (0-1023) to a range of 1-100
+- Print the mapped value to the serial port
+
+Unreal Engine: 
+
+- Copy the BP_Arduino_Comm.uasset inside the "Content" folder of your UE Project.
+- Change the "Port" number to the correspondent Port of your Arduino Board.
+- Play: The values from 0 to 100 will print on your screen.
+ 

@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\module.serialcom.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\project_work\\serialcom_ue503\\intermediate\\build\\win64\\serialcom_ue503editor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
+            "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\serialcom.gen.cpp",
+            "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\source\\serialcom\\public\\serialcom.h",
+            "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\serialcom.generated.h",
+            "d:\\project_work\\serialcom_ue503\\plugins\\serialcom_ue50301\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\serialcom.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

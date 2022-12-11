@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SERIALCOM.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\PROJECT_WORK\SerialCom_UE503\Intermediate\Build\Win64\SerialCom_UE503Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\PROJECT_WORK\SerialCom_UE503\Plugins\SERIALCOM_UE50301\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
+"D:\PROJECT_WORK\SerialCom_UE503\Plugins\SERIALCOM_UE50301\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.gen.cpp.obj"
+"D:\PROJECT_WORK\SerialCom_UE503\Plugins\SERIALCOM_UE50301\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
+/OUT:"D:\PROJECT_WORK\SerialCom_UE503\Plugins\SERIALCOM_UE50301\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\UnrealEditor-SERIALCOM.lib"

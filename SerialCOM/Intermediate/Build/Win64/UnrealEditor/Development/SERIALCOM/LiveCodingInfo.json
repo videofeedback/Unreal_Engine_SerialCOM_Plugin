@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SERIALCOM.cpp.obj": [
+			"SerialCom.cpp.obj",
+			"SERIALCOMModule.cpp.obj"
+		],
+		"Module.SERIALCOM.gen.cpp.obj": [
+			"SerialCom.gen.cpp.obj",
+			"SERIALCOM.init.gen.cpp.obj"
+		]
+	}
+}

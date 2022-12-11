@@ -1,12 +1,17 @@
 
-BLUEPRINT FOR UNREAL ENGINE (4.25/4.26/4.27/*5.0EA)
-------------------------------------------------------------------------------------------
+BLUEPRINT FOR UNREAL ENGINE (4.25/4.26/4.27/5.0.3)
+-------------------------------------------------------------
 
 #1 Select the Zipfile for your correct Engine:
-	- SERIALCOMUE425/SERIALCOM.zip (Unreal Engine 4.25)
-	- SERIALCOMUE426/SERIALCOM.zip (Unreal Engine 4.26)
-	- SERIALCOMUE427/SERIALCOM.zip (Unreal Engine 4.27)
-	- SERIALCOMUE5EA/SERIALCOM.zip (Unreal Engine 5.0 Early Access)
+	- SERIALCOMUE425/SERIALCOM_UE425.zip 	(Unreal Engine 4.25)
+	- SERIALCOMUE426/SERIALCOM_UE426.zip 	(Unreal Engine 4.26)
+	- SERIALCOMUE427/SERIALCOM_UE427.zip 	(Unreal Engine 4.27)
+	- SERIALCOMUE5EA/SERIALCOM_UE5EA_r1.zip (Unreal Engine 5EA)
+--------------------------------------------------------------------
+	- SERIALCOM_4_UE503/SERIALCOM_4UE503.zip (Unreal Engine 5.0.3)
+
+
+
 
 #2 Unzip the correspondent Zip file into your project "Plugins" Folder. If doesn't exist, create one.
 ---------->Your_Project_Folder-->
@@ -16,16 +21,13 @@ BLUEPRINT FOR UNREAL ENGINE (4.25/4.26/4.27/*5.0EA)
 ----------------->DerivedDataCache
 ----------------->Intermidiate
 ----------------->Plugins_
-                          |------>SERIALCOM_UExxx
+                          |------>SERIALCOM_EUXXX
 ----------------->Saved
 Your_Project.uproject
 
 #3 Activate  "Communication Serial Port (Serial COM)" plugin from your plugin list.
 
 #4 Re-Start your Project. You are ready to use the plugin!!!
-
-*5.0EA (Unreal Engine 5 is using the same binary as 4.27, but it will work. A warning message will show up telling you that the plugin is for 4.27, accept and continue)
-
 
 
 Enjoy it!
@@ -42,3 +44,4 @@ Thank you!
 Ramiro Montes De Oca,
 Ramiro's Lab
 
+Updated 12/11//2022

@@ -34,11 +34,11 @@ Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 ## "Serial COM" v3.0.0.4 (Beta) (Fork of UE4Duino)
 
 
-[![](https://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/SerialCOM/images/serial_com_fork_03.png)](hhttps://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/SerialCOM/images/serial_com_fork_03.png)
+[![](https://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)](hhttps://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)
 
 ## List of Functions:
 
-[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_list_of_functions_01.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_list_of_functions_01.png)
+[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_list_of_functions_01.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_list_of_functions_01.png)
 
 
 
@@ -105,7 +105,7 @@ For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugi
 
 ## Opening Port Example
 
-[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_opening_port_example_02.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_opening_port_example_02.png)
+[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_opening_port_example_02.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_opening_port_example_02.png)
 
 
 
@@ -113,7 +113,7 @@ For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugi
 
 Each Zip file contains the correstpondent blueprint for each UE version. Drag and drop the .uasset (Blueprint) file to your project. Read the complete insturctions inside the "BLUEPRINT" folder of this plugin.
 
-[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example_01.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/SerialCOM/images/serialcom_blueprint_example_01.png)
+[![](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_blueprint_example_01.png)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/blob/main/images/serialcom_blueprint_example_01.png)
 
 ----------------------------------------------------------------------------------------------------------
 

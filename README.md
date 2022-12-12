@@ -1,25 +1,20 @@
 # Serial Communication Plugin for Unreal Engine
 Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
 
-## "Serial COM" v4.5.0.3 RELEASE NOTES (12/11/2022)
+## "Serial COM" v4.5.1.0 RELEASE NOTES (12/12/2022)
 
-- Fully compatible with Unreal Engine 5.0.3
+- Fully compatible with Unreal Engine 5.1.0
 - Change Compiler from Visual Studio 2019 to Visual Studio 2022
 - Fixed Arduino Examples
 - Added New Arduino & UE Blueprints
 
 
-## "Serial COM" v3.0.0.6 (Beta) RELEASE NOTES
-
-- Fully compatible with Unreal Engine 5.0.0 EA
-
-## "Serial COM" v3.0.0.5 (Beta) RELEASE NOTES
-
-- Small but significant change. Internally changed the function from "USerial" to "USerialCom" to avoid problems if another UE4Duino plugin is running at the same time. This change makes is to avoid any conflict with old functions and corruption of plugins.
-
 ## Downloads:
 
-[SerialCOM v3.0.0.6 Plugin for Unreal Engine 5.0.3 (With Blueprint Example) ](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v3.0.0.6/SERIALCOM_UE50301.zip)
+[SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example) ]
+(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/blob/main/SerialCOM_4_UE510.zip)
+
+[SerialCOM v4.5.0.3 Plugin for Unreal Engine 5.0.3 (With Blueprint Example) ](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v3.0.0.6/SERIALCOM_UE50301.zip)
 
 [SerialCOM v3.0.0.5 Plugin for Unreal Engine 4.27 (With Blueprint Example)](https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/releases/download/SerialCOM_v3.0.0.5/SERIALCOM_UE427.zip)
 

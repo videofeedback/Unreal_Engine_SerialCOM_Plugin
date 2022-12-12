@@ -1,0 +1,39 @@
+
+BLUEPRINT FOR UNREAL ENGINE (5.1.0)
+-------------------------------------------------------------------------------------------------
+
+#1 Inside this folder "BLUEPRINTS", there is the same blueprint example for each different UE version.
+
+#2 Drag and Drop this file "BP_SerialCom_UExx.uasset" into your project.s
+
+#3 Drag and Drop ""BP_Serial_UEXxx" blueprint inside your Level.
+
+#4 Inside the BP_Serial_UExx, change the "Port" number to your correspondent port in your micro-controller or Serial Communication Application.
+
+#5 Connect your Arduino or any other Serial Communication device you your computer.
+
+#6 If you see "PORT IS INITIALIZED!" on your screen, that is a confirmation that the port is connected to a Serial Port.
+
+
+#7 Once you confirm your Com port, you are ready to test the blueprint.
+	- Press the "SPACE BAR" to print a string on the serial port and send another message to the UE screen.
+	- Press the letter "Q" to close the Serial Port.
+	- Press the letter "Z" to reconnect to the Serial Port.	
+
+Enjoy it!
+
+
+https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/
+
+For support and comments,
+
+Discord: https://discord.ramiroslab.com
+
+Github: https://github.reamiroslab.com
+
+YouTube: https://youtube.ramiroslab.com
+
+Thank you!
+Ramiro Montes De Oca,
+Ramiro's Lab
+

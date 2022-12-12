@@ -1,0 +1,34 @@
+
+
+"Serial COM" v4.5.1.0 RELEASE NOTES
+--------------------------------------------------------------
+- Version compatible with Unreal Engine v5.1.0
+- Changing compiling from Visual Studio 2019 to Visual Studio 2022. 
+- Use VS 2022 from now on if you want to make future changes.
+
+
+Known Issues:
+----------------------------
+
+- "Serial COM" v4.5.1.0 will not be compatible with "UE4Duino" 2.2.5 because the library doesn't share the "UE4DUINO" name anymore, using its own new "SERIALCOM" identifier. Changing to this library will make the old EU4Duino modules in red, indicating that those components are not available anymore.
+Solution: Each component can be replaced with the current version by replacing each one by hand. The replacement equivalent chart is available at:
+https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port  (Modules lists comparison chart)
+
+- Arduino doesn't connects again if you close the project without closing the port.
+Solution:  Use the best practice of creating an "Event End Play" with "Close Serial Port" connected to the event. This is the cleanest solution for this problem and best practice. 
+For more information, visit https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port where we describe the best practices for the use of this plugin.
+
+
+
+-----------------------------------------------------------------------------------------------------
+Ramiro Montes De Oca (Ramiro's Lab)
+Discord: https://discord.ramiroslab.com
+YouTube: https://youtube.ramiroslab.com
+Github: https://github.ramiroslab.com
+
+----------------------------------------------------------------------------------------------------
+Copyright (c) 2015 v1 FusionLabz/Gryzly32 (UE4Duino)
+Copyright (c) 2018-2020 v2 Rodrigo Villani Pereira (UE4Duino)
+Copyright (c) 2021-2022 v3/v4  Ramiro Montes De Oca (SerialCOM) fork of (UE4Duino 2.2.5) + Major modifications (See previous releases notes)
+
+

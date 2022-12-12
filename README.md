@@ -165,5 +165,5 @@ Github: https://github.ramiroslab.com
 
 [Copyright (c) 2021-2022 v3 Ramiro Montes De Oca (SerialCOM) fork of (UE4Duino 2.2.5)](https://github.com/videofeedback/Unreal_Engine_SerialCOM/)
 
-[Copyright (c) 2022 v4 Ramiro Montes De Oca (SerialCOM) 
+[Copyright (c) 2022 v4 Ramiro Montes De Oca (SerialCOM)](https://github.com/videofeedback/Unreal_Engine_SerialCOM/)
   

@@ -11,17 +11,15 @@ Serial Com Port Library for Unreal Engine 5.1.0
 
 ## Downloads:
 
-[SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example)]
-(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/blob/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE510/SerialCOM_4_UE510.zip)
+[SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/blob/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE510/SerialCOM_4_UE510.zip)
 
-[SerialCOM v4.5.0.3 Plugin for Unreal Engine 5.0.3 (With Blueprint Example) ](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SRIALCOM_4_UE503)
+[SerialCOM v4.5.0.3 Plugin for Unreal Engine 5.0.3 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SRIALCOM_4_UE503)
 
-[SerialCOM v3.0.0.5 Plugin for Unreal Engine 4.27 (With Blueprint Example)]
-(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/blob/main/_PLUGINS_REPOSITORY/SERIALCOM_UE427/SERIALCOM_UE427.zip)
+[SerialCOM v3.0.0.6 Plugin for Unreal Engine 4.27 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/blob/main/_PLUGINS_REPOSITORY/SERIALCOM_UE427/SERIALCOM_UE427.zip)
 
 -----------------------------------------------------------------------------
 
-## "Serial COM" v4.5.0.3 (Fork of UE4Duino)
+## "Serial COM" (Fork of UE4Duino)
 
 
 [![](https://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)](hhttps://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)
@@ -59,7 +57,7 @@ Serial Com Port Library for Unreal Engine 5.1.0
   
   
   
-### "Serial COM" v3.0.0 (Beta) RELEASE NOTES
+### "Serial COM" v3.0.0 (Beta) PREVIOUS RELEASES NOTES
 
 - The "Serial COM" 3.0.0 Plugin now works nativelley in Unreal Engine 4.27/4.26/4.24 (PARTIAL SUPPORT WITH UE 5EA*) without having to re-build the project and possibly not be able to re-build for the lack of missing SDK's requirements. 
 * Unreal Engine 5(Early Access) still requires to rebuild the plugin. UE5 is able to rebuild the plugin. Until a new method to rebuild the plugin for UE5 is available, this is the only version compatible with UE5.
@@ -83,7 +81,7 @@ GITHUB REPOSITORY (this one): https://github.com/videofeedback/Unreal-Engine-Plu
 Known Issues:
 ----------------------------
 
-- "Serial COM" 3.0.0 will not be compatible with "UE4Duino" 2.2.5 because the library doesn't share the "UE4DUINO" name anymore, using its own new "SERIALCOM" identifier. Changing to this library will make the old EU4Duino modules in red, indicating that those components are not available anymore.
+- "Serial COM" will not be compatible with "UE4Duino" 2.2.5 because the library doesn't share the "UE4DUINO" name anymore, using its own new "SERIALCOM" identifier. Changing to this library will make the old EU4Duino modules in red, indicating that those components are not available anymore.
 Solution: Each component can be replaced with the current version by replacing each one by hand. The replacement equivalent chart is available at:
 https://github.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port  (Modules lists comparison chart)
 
@@ -167,5 +165,5 @@ Github: https://github.ramiroslab.com
 
 [Copyright (c) 2021-2022 v3 Ramiro Montes De Oca (SerialCOM) fork of (UE4Duino 2.2.5)](https://github.com/videofeedback/Unreal_Engine_SerialCOM/)
 
-
+[Copyright (c) 2022 v4 Ramiro Montes De Oca (SerialCOM) 
   

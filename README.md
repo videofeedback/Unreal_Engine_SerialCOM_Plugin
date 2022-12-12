@@ -1,5 +1,5 @@
 # Serial Communication Plugin for Unreal Engine
-Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
+Serial Com Port Library for Unreal Engine 5.1.0
 
 ## "Serial COM" v4.5.1.0 RELEASE NOTES (12/12/2022)
 

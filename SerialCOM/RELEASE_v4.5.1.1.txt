@@ -1,6 +1,6 @@
 
 
-"Serial COM" v4.5.1.1 RELEASE NOTES
+"Serial COM" v4.5.1.1 RELEASE NOTES  
 --------------------------------------------------------------
 - Version compatible with Unreal Engine v5.1.1
 

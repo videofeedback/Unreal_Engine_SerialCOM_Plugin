@@ -1,12 +1,9 @@
 # Serial Communication Plugin for Unreal Engine
-Serial Com Port Library for Unreal Engine 5.1.0
+Serial Com Port Library for Unreal Engine 5.1.1
 
-## "Serial COM" v4.5.1.0 RELEASE NOTES (12/12/2022)
+## "Serial COM" v4.5.1.1 RELEASE NOTES (3/18/2023)
 
-- Fully compatible with Unreal Engine 5.1.0
-- Change Compiler from Visual Studio 2019 to Visual Studio 2022
-- Fixed Arduino Examples
-- Added New Arduino & UE Blueprints
+- Fully compatible with Unreal Engine 5.1.1
 
 
 ## Downloads:

@@ -1,16 +1,16 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\module.serialcom.cpp",
+        "Source": "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\module.serialcom.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\project_work\\serialcom_ue510\\intermediate\\build\\win64\\serialcom_ue510editor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "PCH": "e:\\projects_work\\serialcom4511\\intermediate\\build\\win64\\serialcom4511editor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
         "Includes": [
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.gen.cpp",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\source\\serialcom\\public\\serialcom.h",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.generated.h",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\source\\serialcom\\private\\serialcom.cpp",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.gen.cpp",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\source\\serialcom\\public\\serialcom.h",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.generated.h",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\source\\serialcom\\private\\serialcom.cpp",
             "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\windows\\allowwindowsplatformtypes.h",
             "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\windows\\windowshwrapper.h",
             "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\windows\\prewindowsapi.h",
@@ -113,8 +113,8 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ime_cmodes.h",
             "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\windows\\postwindowsapi.h",
             "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\windows\\hidewindowsplatformtypes.h",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\source\\serialcom\\private\\serialcommodule.cpp",
-            "d:\\project_work\\serialcom_ue510\\plugins\\serialcom_4_ue510\\source\\serialcom\\public\\serialcommodule.h"
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\source\\serialcom\\private\\serialcommodule.cpp",
+            "e:\\projects_work\\serialcom4511\\plugins\\serialcom\\source\\serialcom\\public\\serialcommodule.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

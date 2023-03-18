@@ -64,10 +64,10 @@
 /DNDEBUG=1
 /DUE_BUILD_DEVELOPMENT=1
 /DORIGINAL_FILE_NAME="UnrealEditor-SERIALCOM.dll"
-/DBUILT_FROM_CHANGELIST=23058290
-/DBUILD_VERSION=++UE5+Release-5.1-CL-23058290
+/DBUILT_FROM_CHANGELIST=23901901
+/DBUILD_VERSION=++UE5+Release-5.1-CL-23901901
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
-/DPROJECT_PRODUCT_IDENTIFIER=SerialCom_UE510
-/fo "D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
+/DPROJECT_PRODUCT_IDENTIFIER=SerialCom4511
+/fo "E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

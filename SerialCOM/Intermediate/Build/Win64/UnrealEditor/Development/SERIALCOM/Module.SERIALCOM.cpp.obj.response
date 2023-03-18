@@ -1,6 +1,6 @@
-D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp
+E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp
 /I .
-/I D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Source\SERIALCOM\Private
+/I E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Source\SERIALCOM\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I Runtime
 /I ..\Shaders\Shared
@@ -270,9 +270,9 @@ D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Inc\SERIALCOM\UHT
-/I D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Source
-/I D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Source\SERIALCOM\Public
+/I E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Inc\SERIALCOM\UHT
+/I E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Source
+/I E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Source\SERIALCOM\Public
 /external:W0
 /external:I ThirdParty\mimalloc\include
 /external:I ThirdParty\LibTiff\Source\Win64
@@ -282,12 +282,12 @@ D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\PROJECT_WORK\SerialCom_UE510\Intermediate\Build\Win64\SerialCom_UE510Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
-/FI"D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Definitions.SERIALCOM.h"
-/Yu"D:\PROJECT_WORK\SerialCom_UE510\Intermediate\Build\Win64\SerialCom_UE510Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
-/Fp"D:\PROJECT_WORK\SerialCom_UE510\Intermediate\Build\Win64\SerialCom_UE510Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.pch"
-/Fo"D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
-/sourceDependencies D:\PROJECT_WORK\SerialCom_UE510\Plugins\SerialCOM_4_UE510\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.dep.json
+/FI"E:\PROJECTS_WORK\SerialCom4511\Intermediate\Build\Win64\SerialCom4511Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
+/FI"E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Definitions.SERIALCOM.h"
+/Yu"E:\PROJECTS_WORK\SerialCom4511\Intermediate\Build\Win64\SerialCom4511Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
+/Fp"E:\PROJECTS_WORK\SerialCom4511\Intermediate\Build\Win64\SerialCom4511Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.pch"
+/Fo"E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
+/sourceDependencies E:\PROJECTS_WORK\SerialCom4511\Plugins\SerialCOM\Intermediate\Build\Win64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.dep.json
 /Zc:inline
 /nologo
 /Oi

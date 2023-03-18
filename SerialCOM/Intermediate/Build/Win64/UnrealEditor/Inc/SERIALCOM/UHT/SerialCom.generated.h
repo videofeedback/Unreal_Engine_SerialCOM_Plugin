@@ -16,8 +16,8 @@ enum class ELineEnd : uint8;
 #endif
 #define SERIALCOM_SerialCom_generated_h
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execLineEndToStr); \
 	DECLARE_FUNCTION(execGetBaud); \
@@ -46,7 +46,7 @@ enum class ELineEnd : uint8;
 	DECLARE_FUNCTION(execOpenComPortWithFlowControl);
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execLineEndToStr); \
 	DECLARE_FUNCTION(execGetBaud); \
@@ -75,8 +75,8 @@ enum class ELineEnd : uint8;
 	DECLARE_FUNCTION(execOpenComPortWithFlowControl);
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS_NO_PURE_DECLS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSerialCom(); \
 	friend struct Z_Construct_UClass_USerialCom_Statics; \
@@ -85,7 +85,7 @@ public: \
 	DECLARE_SERIALIZER(USerialCom)
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS \
 private: \
 	static void StaticRegisterNativesUSerialCom(); \
 	friend struct Z_Construct_UClass_USerialCom_Statics; \
@@ -94,7 +94,7 @@ public: \
 	DECLARE_SERIALIZER(USerialCom)
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_STANDARD_CONSTRUCTORS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USerialCom(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USerialCom) \
@@ -107,7 +107,7 @@ private: \
 public:
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_ENHANCED_CONSTRUCTORS \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USerialCom(USerialCom&&); \
@@ -118,27 +118,27 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USerialCom)
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_29_PROLOG
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_GENERATED_BODY_LEGACY \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_29_PROLOG
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_STANDARD_CONSTRUCTORS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_GENERATED_BODY \
+#define FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS_NO_PURE_DECLS \
-	FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h_32_ENHANCED_CONSTRUCTORS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_SPARSE_DATA \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_ACCESSORS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_INCLASS_NO_PURE_DECLS \
+	FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -146,7 +146,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SERIALCOM_API UClass* StaticClass<class USerialCom>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_SerialCom_UE510_Plugins_SerialCOM_4_UE510_Source_SERIALCOM_Public_SerialCom_h
+#define CURRENT_FILE_ID FID_SerialCom4511_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h
 
 
 #define FOREACH_ENUM_ELINEEND(op) \

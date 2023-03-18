@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 3,
-	"VersionName": "4.5.1.0.1",
+	"VersionName": "4.5.1.1.1",
 	"FriendlyName": "Communication Serial Port (Serial COM)",
 	"Description": "This library enables Serial communication with Unreal Engine 4/5. Added DTR/RTS flow control. Compatible with Arduino projects and any other device requiring Serial Communication. This project was forked from EU4Duino (v1 Gryzly32/FuzionLabs, v2 Rodrigo Villani). Serial Com v3/v4 by Ramiro Montes De Oca.",
 	"Category": "Input",

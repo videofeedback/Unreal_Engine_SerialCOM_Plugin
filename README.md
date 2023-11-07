@@ -25,7 +25,7 @@ Serial Com Port Library for Unreal Engine 5.3.2
 ## "Serial COM" (Fork of UE4Duino)
 
 
-[![](https://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)](hhttps://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_03.png)
+[![](https://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_05.png)](hhttps://raw.githubusercontent.com/videofeedback/Unreal-Engine-Plugin-Communication-Serial-Port/main/images/serial_com_fork_05.png)
 
 ## List of Functions:
 

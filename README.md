@@ -1,12 +1,19 @@
 # Serial Communication Plugin for Unreal Engine
-Serial Com Port Library for Unreal Engine 5.1.1
+Serial Com Port Library for Unreal Engine 5.3.2
 
-## "Serial COM" v4.5.1.1 RELEASE NOTES (3/18/2023)
+## "Serial COM" v5.5.3.2 RELEASE NOTES (11/1/2023)
 
-- Fully compatible with Unreal Engine 5.1.1
+- Fully compatible with Unreal Engine 5.3.2
 
 
-## Downloads:
+## Downloads (Releases):
+
+[SerialCOM v4.5.3.2 Plugin for Unreal Engine 5.3.2 (With Blueprint Example)]
+(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.3.2/SerialCOM_5_UE532.zip)
+
+[SerialCOM v4.5.2.1 Plugin for Unreal Engine 5.2.1 (With Blueprint Example)]
+(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.2.1/SerialCOM_5_UE521.zip)
+
 [SerialCOM v4.5.1.1 Plugin for Unreal Engine 5.1.1 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE511)
 
 [SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE510)
@@ -30,7 +37,7 @@ Serial Com Port Library for Unreal Engine 5.1.1
 
 ### Renamed Functions:
 -----------------------------------------------------------------------------------
-	UE4Duino v2.2.5				Serial COM v4
+	UE4Duino v2.2.5				Serial COM v5
 	- Close Port 				- Close Serial Port
 	- Flash Port 				- Flash Serial Port
 	- Open Port 				- Open Serial Port

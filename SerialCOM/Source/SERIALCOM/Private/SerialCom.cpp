@@ -5,7 +5,7 @@
 #include "Windows/AllowWindowsPlatformTypes.h"
 #include "Windows/MinWindows.h"
 #include "Windows/HideWindowsPlatformTypes.h"
-
+#include "serial.h"
 
 #define BOOL2bool(B) B == 0 ? false : true
 
@@ -29,6 +29,36 @@ USerialCom* USerialCom::OpenComPort(bool& bOpened, int32 Port, int32 BaudRate)
 	return Serial;
 }
 
+
+USerialCom* USerialCom::OpenComPortWithVIDPID(bool& bOpened, FString VID, FString PID, int32 BaudRate)
+{
+	USerialCom* Serial = NewObject<USerialCom>();
+	std::vector<serial::PortInfo> devices_found = serial::list_ports();
+	std::vector<serial::PortInfo>::iterator iter = devices_found.begin();
+
+	while (iter != devices_found.end())
+	{
+		serial::PortInfo device = *iter++;
+		UE_LOG(LogTemp, Log, TEXT("Device: %s, %s"), *FString(device.hardware_id.c_str()), *FString(device.port.c_str()));
+		FString hS = FString(device.hardware_id.c_str()).ToLower();
+		if (hS.Contains(VID.ToLower()) && hS.Contains(PID.ToLower()))
+		{
+			//remove COM from port name
+			FString port = FString(device.port.c_str()).RightChop(3);
+
+			//get int from string
+			int32 portNumber = FCString::Atoi(*port);
+
+			UE_LOG(LogTemp, Log, TEXT("Found device: %s, %i"), *FString(port), portNumber);
+
+			bOpened = Serial->OpenWFC(portNumber, BaudRate);
+			return Serial;
+		};
+	}
+
+	return Serial;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
@@ -46,7 +76,7 @@ int32 USerialCom::BytesToInt(TArray<uint8> Bytes)
 	return *reinterpret_cast<int32*>(Bytes.GetData());
 }
 
-TArray<uint8> USerialCom::IntToBytes(const int32 &Int)
+TArray<uint8> USerialCom::IntToBytes(const int32& Int)
 {
 	TArray<uint8> Bytes;
 	Bytes.Append(reinterpret_cast<const uint8*>(&Int), 4);
@@ -67,7 +97,7 @@ float USerialCom::BytesToFloat(TArray<uint8> Bytes)
 
 
 
-TArray<uint8> USerialCom::FloatToBytes(const float &Float)
+TArray<uint8> USerialCom::FloatToBytes(const float& Float)
 {
 	TArray<uint8> Bytes;
 	Bytes.Append(reinterpret_cast<const uint8*>(&Float), 4);
@@ -131,7 +161,7 @@ bool USerialCom::OpenWFC(int32 nPort, int32 nBaud, bool bDTR, bool bRTS)
 	if (m_hIDComDev)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Trying to use opened Serial instance to open a new one. "
-				"Current open instance port: %d | Port tried: %d"), m_Port, nPort);
+			"Current open instance port: %d | Port tried: %d"), m_Port, nPort);
 		return false;
 	}
 
@@ -223,17 +253,17 @@ void USerialCom::Close()
 	RemoveFromRoot();
 }
 
-FString USerialCom::ReadString(bool &bSuccess)
+FString USerialCom::ReadString(bool& bSuccess)
 {
 	return ReadStringUntil(bSuccess, '\0');
 }
 
-FString USerialCom::Readln(bool &bSuccess)
+FString USerialCom::Readln(bool& bSuccess)
 {
 	return ReadStringUntil(bSuccess, '\n');
 }
 
-FString USerialCom::ReadStringUntil(bool &bSuccess, uint8 Terminator)
+FString USerialCom::ReadStringUntil(bool& bSuccess, uint8 Terminator)
 {
 	bSuccess = false;
 	if (!m_hIDComDev) return TEXT("");
@@ -287,7 +317,7 @@ FString USerialCom::ReadStringUntil(bool &bSuccess, uint8 Terminator)
 	return FString(Convert.Get());
 }
 
-float USerialCom::ReadFloat(bool &bSuccess)
+float USerialCom::ReadFloat(bool& bSuccess)
 {
 	bSuccess = false;
 
@@ -298,7 +328,7 @@ float USerialCom::ReadFloat(bool &bSuccess)
 	return *(reinterpret_cast<float*>(Bytes.GetData()));
 }
 
-int32 USerialCom::ReadInt(bool &bSuccess)
+int32 USerialCom::ReadInt(bool& bSuccess)
 {
 	bSuccess = false;
 
@@ -309,7 +339,7 @@ int32 USerialCom::ReadInt(bool &bSuccess)
 	return *(reinterpret_cast<int32*>(Bytes.GetData()));
 }
 
-uint8 USerialCom::ReadByte(bool &bSuccess)
+uint8 USerialCom::ReadByte(bool& bSuccess)
 {
 	bSuccess = false;
 	if (!m_hIDComDev) return 0x0;
@@ -493,7 +523,7 @@ FString USerialCom::LineEndToStrBD(ELineEnd LineEnd)
 		return TEXT("600");
 	case ELineEnd::E:
 		return TEXT("1200");
-/*		
+/*
 	case ELineEnd::1800:
 		return TEXT("1800");
 	case ELineEnd::2400:

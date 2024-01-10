@@ -184,7 +184,7 @@ public:
  * @return USerialCom* - Returns a valid USerialCom object if the device is found, null otherwise. Even if the port is occupied, a valid USerialCom object is returned.
  */
 		UFUNCTION(BlueprintCallable, meta = (DisplayName = "Open Serial Port"), Category = "Communication Serial", meta = (Keywords = "communication com SERIALCOM duino arduino serial port start open serial"))
-		static USerialCom* FindAndOpenSerialPortByDeviceName(FString DeviceName, UPARAM(meta = (Bitmask, BitmaskEnum = ESerialDevicesFindFlags)) int32 FindFlags = 0x01, bool& bOpened, int32& FindComPort, int32 Port = 1, int32 BaudRate = 9600);
+		static USerialCom* FindAndOpenSerialPortByDeviceName(FString DeviceName, bool& bOpened, int32& FindComPort, UPARAM(meta = (Bitmask, BitmaskEnum = ESerialDevicesFindFlags)) int32 FindFlags = 0x01, int32 BaudRate = 9600);
 
 
 

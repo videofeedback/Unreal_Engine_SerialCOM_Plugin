@@ -135,7 +135,7 @@ TArray<FSerialPortInfo> USerialCom::FindAllSerialPortDevicePortInfo(FString Devi
 	TArray<FSerialPortInfo> ReturnValue;
 	if (FindFlags > (int32)ESerialDevicesFindFlags::ESDFF_RegularExpressionMatching)
 	{
-		UE_LOG(LogTemp, Error, TEXT("FindFlags is greater than %d,this is a bad value. FindFlags: %d"), ESerialDevicesFindFlags::RegularExpressionMatching, FindFlags);
+		UE_LOG(LogTemp, Error, TEXT("FindFlags is greater than %d,this is a bad value. FindFlags: %d"), ESerialDevicesFindFlags::ESDFF_RegularExpressionMatching, FindFlags);
 		ensure(0);
 		return ReturnValue;
 	}
@@ -183,7 +183,7 @@ TArray<FSerialPortInfo> USerialCom::FindAllSerialPortDevicePortInfo(FString Devi
 	return ReturnValue;
 }
 
-USerialCom* USerialCom::FindAndOpenSerialPortByDeviceName(FString DeviceName, int32 FindFlags, bool& bOpened, int32& FindComPort, int32 Port, int32 BaudRate)
+USerialCom* USerialCom::FindAndOpenSerialPortByDeviceName(FString DeviceName, bool& bOpened, int32& FindComPort, int32 FindFlags /*= 0x01*/, int32 BaudRate /*= 9600*/)
 {
 	if (FindSerialPortDevicePortNumber(DeviceName, FindComPort, FindFlags))
 	{

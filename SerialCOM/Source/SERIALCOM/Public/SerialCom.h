@@ -26,6 +26,80 @@ enum class ELineEnd : uint8
 	nr	UMETA(DisplayName = "\n\r")
 };
 
+/**
+ * @enum ESerialDevicesFindFlags
+ * @brief Flags to control the behavior of serial device searching.
+ *
+ * This enumeration contains flags that can be used to control the behavior of functions that search for serial devices.
+ * Each flag represents a different search option or constraint.
+ */
+UENUM(BlueprintType, Category = "Communication Serial Find Flags", meta = (Bitflags, UseEnumValuesAsMaskValuesInEditor = "true"))
+enum class ESerialDevicesFindFlags : uint8
+{
+	/**
+	 * @brief Invalid flag.
+	 *
+	 * This flag cannot be used. It's likely a placeholder or reserved for future usage.
+	 */
+	ESDFF_Error = 0x00 UMETA(DisplayName = "Error"),
+	/**
+	 * @brief Partial character match.
+	 *
+	 * If this flag is set, the search function will match devices whose names contain the search string as a substring.
+	 * If this flag is not set, the search function will perform a full character match, only matching devices whose names are exactly the same as the search string.
+	 */
+	ESDFF_PartialCharacterMatching = 0x01 UMETA(DisplayName = "PartialCharacterMatching"),
+	/**
+	* @brief Case sensitive.
+	*
+	* If this flag is set, the search function will perform a case-sensitive search, meaning that "Device1" and "device1" would be considered different names.
+	* If this flag is not set, the search function will perform a case-insensitive search.
+	*/
+	ESDFF_CaseSensitive = 0x02 UMETA(DisplayName = "CaseSensitive"),
+	/**
+	 * @brief Regular expression match.
+	 *
+	 * If this flag is set, the search string will be treated as a regular expression and the search function will match devices whose names match the regular expression.
+	 * This flag can only be used alone, not in combination with other flags.
+	 */
+	ESDFF_RegularExpressionMatching = 0x04 UMETA(DisplayName = "RegularExpressionMatching(Multiple Choice)"),
+
+};
+
+ENUM_CLASS_FLAGS(ESerialDevicesFindFlags);
+
+USTRUCT(BlueprintType)
+struct FSerialPortInfo
+{
+	GENERATED_BODY()
+
+	UPROPERTY(BlueprintReadWrite)
+	int32 Port = -1;
+	UPROPERTY(BlueprintReadWrite)
+	FString PortName;
+	UPROPERTY(BlueprintReadWrite)
+	FString Description;
+
+	//define constructs
+	FSerialPortInfo() = default;
+	FSerialPortInfo(int32 InPort, FString InPortName, FString InDescription)
+	{
+		Port = InPort;
+		PortName = InPortName;
+		Description = InDescription;
+	}
+	FSerialPortInfo(const FSerialPortInfo& Other) = default;
+	FSerialPortInfo& operator=(const FSerialPortInfo& Other)
+	{
+		this->Port = Other.Port;
+		this->PortName = Other.PortName;
+		this->Description = Other.Description;
+		return *this;
+	}
+	FSerialPortInfo(FSerialPortInfo&& Other) = default;
+
+};
+
 UCLASS(BlueprintType, Category = "Communication Serial", meta = (Keywords = "com arduino serial arduino duino"))
 class SERIALCOM_API USerialCom : public UObject
 {
@@ -54,13 +128,63 @@ public:
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Open Serial Port With Flow Control"), Category = "Communication Serial", meta = (Keywords = "communication com SERIALCOM duino arduino serial port start open serial with flow control"))
 		static USerialCom* OpenComPortWithFlowControl(bool &bOpened, int32 Port = 1, int32 BaudRate = 9600, bool DTR = true, bool RTS = true);
 
-	/**
-	 * Utility function to convert 4 bytes into an Integer. If the input array's length is not 4, returns 0.
-	 *
-	 * @param Bytes A byte array with 4 values representing the integer in little-endian format.
-	 * @return The final integer value or 0 for an invalid array.
-	 */
+		/*
+		* This function scans the system for all serial port devices and collects their names and port numbers. 
+		* It returns an array of FSerialPortInfo objects, each containing the name and port number of a serial port device.
+		*
+		* @return All serial port devices and port numbers structure
+		*/
+		UFUNCTION(BlueprintPure, Category = "Communication Serial")
+		static TArray<FSerialPortInfo> GetAllSerialPortDevicesAndPortNumbers();
+		/**
+		* @brief Find the port number of a serial port device.
+		*
+		* This function attempts to find the port number of a specific serial port device based on its name.
+		* If the device is found, the function returns true and the port number is stored in the reference parameter 'FindComPort'.
+		* If the device is not found, the function returns false.
+		*
+		* @param DeviceName  - The name of the serial port device to find.
+		* @param FindComPort - A reference parameter where the found port number will be stored.
+		* @param FindFlags   - Flags to control the search behavior .
+		*
+		* @return bool - Returns true if the device is found, false otherwise.
+		*/
+		UFUNCTION(BlueprintPure, Category = "Communication Serial",meta = (Keywords = "communication com SERIALCOM duino arduino serial port serial FindPor FindCom"))
+		static bool FindSerialPortDevicePortNumber(FString DeviceName, int32& FindComPort, UPARAM(meta = (Bitmask, BitmaskEnum = ESerialDevicesFindFlags)) int32 FindFlags = 0x01);
 
+		/**
+		* @brief Find the port numbers and information of a serial port device.
+		*
+		* This function attempts to find the port numbers and related information of a specific serial port device based on its name.
+		 * If the device is found, the function returns an array of FSerialPortInfo structure, each containing the port number and information of a matching device.
+		 *
+		 * @param DeviceName - The name of the serial port device to find.
+		 *
+		* @param FindFlags - Flags to control the search behavior (the specific meaning of the flags depends on the implementation).
+		 *
+		* @return TArray<FSerialPortInfo> - Returns an array of FSerialPortInfo structure if the device is found. Each FSerialPortInfo object contains the port number and information of a matching device.
+		*/
+		UFUNCTION(BlueprintPure, Category = "Communication Serial", meta = (Keywords = "communication com SERIALCOM duino arduino serial port serial FindPor FindCom"))
+		static TArray<FSerialPortInfo> FindAllSerialPortDevicePortInfo(FString DeviceName, UPARAM(meta = (Bitmask, BitmaskEnum = ESerialDevicesFindFlags)) int32 FindFlags = 0x01);
+
+		/**
+ * @brief Find and open a serial port by device name.
+ *
+ * This function attempts to find a serial port device by its name and open it. If the device is found and the port is not occupied,
+ * the function returns a valid USerialCom object and sets the 'bOpened' reference parameter to true. If the port is occupied,
+ * the function still returns a valid USerialCom object, but sets 'bOpened' to false. If the device is not found, the function returns a null pointer.
+ *
+ * @param DeviceName - The name of the serial port device to find and open.
+ * @param FindFlags - Flags to control the search behavior (the specific meaning of the flags depends on the implementation).
+ * @param bOpened - A reference parameter that indicates whether the port was successfully opened (true) or not (false).
+ * @param FindComPort - A reference parameter where the found port number will be stored.
+ * @param Port - The port number to open (default is 1).
+ * @param BaudRate - The baud rate to use when opening the port (default is 9600).
+ *
+ * @return USerialCom* - Returns a valid USerialCom object if the device is found, null otherwise. Even if the port is occupied, a valid USerialCom object is returned.
+ */
+		UFUNCTION(BlueprintCallable, meta = (DisplayName = "Open Serial Port"), Category = "Communication Serial", meta = (Keywords = "communication com SERIALCOM duino arduino serial port start open serial"))
+		static USerialCom* FindAndOpenSerialPortByDeviceName(FString DeviceName, UPARAM(meta = (Bitmask, BitmaskEnum = ESerialDevicesFindFlags)) int32 FindFlags = 0x01, bool& bOpened, int32& FindComPort, int32 Port = 1, int32 BaudRate = 9600);
 
 
 

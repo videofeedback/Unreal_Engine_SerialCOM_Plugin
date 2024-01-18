@@ -95,7 +95,7 @@ TArray<FSerialPortInfo> USerialCom::GetAllSerialPortDevicesAndPortNumbers()
 	{
 		for (auto it : portInfoList)
 		{
-			m_serialPortInfo.portName = strPortName;
+			m_serialPortInfo.portName = it.portName;
 			int port = strPortName.size() - 1;
 			while (port >= 0 && isdigit(strPortName[port]))
 			{
@@ -104,7 +104,7 @@ TArray<FSerialPortInfo> USerialCom::GetAllSerialPortDevicesAndPortNumbers()
 			std::wstring LocalString = strPortName.substr(port + 1);
 			m_serialPortInfo.port = stoi(LocalString);
 
-			DeviceNameToPort.Add(FSerialPortInfo(m_serialPortInfo.port, m_serialPortInfo.portName.data(), m_serialPortInfo.description.data()));
+			DeviceNameToPort.Add(FSerialPortInfo(m_serialPortInfo.port, m_serialPortInfo.portName.data(), it.description.data()));
 		}
 		return DeviceNameToPort;
 	}

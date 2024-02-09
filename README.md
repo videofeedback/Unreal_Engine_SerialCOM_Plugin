@@ -1,4 +1,4 @@
-[![Discord Follow](https://discord.gg/feYhyYznDf)](https://discord.gg/feYhyYznDf)
+[![Discord Follow](https://dcbadge.vercel.app/api/server/feYhyYznDf?style=flat)](https://discord.gg/feYhyYznDf)
 
 
 

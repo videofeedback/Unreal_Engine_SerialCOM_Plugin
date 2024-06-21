@@ -3,14 +3,17 @@
 
 
 # Serial Communication Plugin for Unreal Engine
-Serial Com Port Library for Unreal Engine 5.3.2
+Serial Com Port Library for Unreal Engine 5.4.2
 
-## "Serial COM" v5.5.3.2 RELEASE NOTES (11/1/2023)
+## "Serial COM" v5.5.4.2 RELEASE NOTES (6/21/2024)
 
-- Fully compatible with Unreal Engine 5.3.2
+- Fully compatible with Unreal Engine 5.4.2
 
 
 ## Downloads (Releases):
+
+[SerialCOM v4.5.4.2 Plugin for Unreal Engine 5.4.2 (With Blueprint Example)]
+(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.4.2/SerialCOM_5_UE542.zip)
 
 [SerialCOM v4.5.3.2 Plugin for Unreal Engine 5.3.2 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.3.2/SerialCOM_5_UE532.zip)
 

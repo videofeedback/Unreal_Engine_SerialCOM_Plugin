@@ -12,20 +12,20 @@ Serial Com Port Library for Unreal Engine 5.4.2
 
 ## Downloads (Releases):
 
-[SerialCOM v4.5.4.2 Plugin for Unreal Engine 5.4.2 (With Blueprint Example)]
+SerialCOM v4.5.4.2 Plugin for Unreal Engine 5.4.2 (With Blueprint Example)
 (https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.4.2/SerialCOM_5_UE542.zip)
 
 [SerialCOM v4.5.3.2 Plugin for Unreal Engine 5.3.2 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.3.2/SerialCOM_5_UE532.zip)
 
-[SerialCOM v4.5.2.1 Plugin for Unreal Engine 5.2.1 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.2.1/SerialCOM_5_UE521.zip)
+SerialCOM v4.5.2.1 Plugin for Unreal Engine 5.2.1 (With Blueprint Example)(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/releases/download/SerialCOM_v5.5.2.1/SerialCOM_5_UE521.zip)
 
-[SerialCOM v4.5.1.1 Plugin for Unreal Engine 5.1.1 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE511)
+SerialCOM v4.5.1.1 Plugin for Unreal Engine 5.1.1 (With Blueprint Example)(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE511)
 
-[SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE510)
+SerialCOM v4.5.1.0 Plugin for Unreal Engine 5.1.0 (With Blueprint Example)(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_4_UE510)
 
-[SerialCOM v4.5.0.3 Plugin for Unreal Engine 5.0.3 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SRIALCOM_4_UE503)
+SerialCOM v4.5.0.3 Plugin for Unreal Engine 5.0.3 (With Blueprint Example)(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SRIALCOM_4_UE503)
 
-[SerialCOM v3.0.0.6 Plugin for Unreal Engine 4.27 (With Blueprint Example)](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_UE427)
+SerialCOM v3.0.0.6 Plugin for Unreal Engine 4.27 (With Blueprint Example)(https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin/tree/main/_PLUGINS_REPOSITORY/SERIALCOM_UE427)
 
 -----------------------------------------------------------------------------
 

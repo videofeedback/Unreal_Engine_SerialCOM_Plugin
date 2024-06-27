@@ -2,10 +2,18 @@
 
 #include "SerialCom.h"
 
+#if PLATFORM_WINDOWS
 #include "Windows/AllowWindowsPlatformTypes.h"
 #include "Windows/MinWindows.h"
 #include "Windows/HideWindowsPlatformTypes.h"
-
+#include <Setupapi.h> //SetupDiGetClassDevs Setup*
+#include <initguid.h> //GUID
+#include <vector>
+#include <string>
+#ifndef GUID_DEVINTERFACE_COMPORT
+DEFINE_GUID(GUID_DEVINTERFACE_COMPORT, 0x86E0D1E0L, 0x8089, 0x11D0, 0x9C, 0xE4, 0x08, 0x00, 0x3E, 0x30, 0x1F, 0x73);
+#endif
+#endif
 
 #define BOOL2bool(B) B == 0 ? false : true
 
@@ -16,11 +24,174 @@ USerialCom* USerialCom::OpenComPortWithFlowControl(bool& bOpened, int32 Port, in
 	return Serial;
 }
 
+TArray<FSerialPortInfo> USerialCom::GetAllSerialPortDevicesAndPortNumbers()
+{
+	TArray<FSerialPortInfo> DeviceNameToPort;
+	//Get all serial ports name and port
+#if PLATFORM_WINDOWS
+   // https://docs.microsoft.com/en-us/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinfo
+
+	bool bRet = false;
+	struct SerialPortInfo {
+		int32 port = -1;
+		std::wstring portName;
+		std::wstring description;
+	};
+	SerialPortInfo   m_serialPortInfo;
+	TArray< SerialPortInfo> portInfoList;
+
+	std::wstring strFriendlyName;
+	std::wstring strPortName;
+
+	HDEVINFO hDevInfo = INVALID_HANDLE_VALUE;
+
+	// Return only devices that are currently present in a system
+	// The GUID_DEVINTERFACE_COMPORT device interface class is defined for COM ports. GUID
+	// {86E0D1E0-8089-11D0-9CE4-08003E301F73}
+	hDevInfo = SetupDiGetClassDevs(&GUID_DEVINTERFACE_COMPORT, NULL, NULL, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
+
+	if (INVALID_HANDLE_VALUE != hDevInfo)
+	{
+		SP_DEVINFO_DATA devInfoData;
+		// The caller must set DeviceInfoData.cbSize to sizeof(SP_DEVINFO_DATA)
+		devInfoData.cbSize = sizeof(SP_DEVINFO_DATA);
+
+		for (DWORD i = 0; SetupDiEnumDeviceInfo(hDevInfo, i, &devInfoData); i++)
+		{
+			// get port name
+			TCHAR portName[256];
+			HKEY hDevKey = SetupDiOpenDevRegKey(hDevInfo, &devInfoData, DICS_FLAG_GLOBAL, 0, DIREG_DEV, KEY_READ);
+			if (INVALID_HANDLE_VALUE != hDevKey)
+			{
+				DWORD dwCount = 255; // DEV_NAME_MAX_LEN
+				RegQueryValueEx(hDevKey, _T("PortName"), NULL, NULL, (BYTE*)portName, &dwCount);
+				RegCloseKey(hDevKey);
+			}
+
+			// get friendly name
+			TCHAR fname[256];
+			SetupDiGetDeviceRegistryProperty(hDevInfo, &devInfoData, SPDRP_FRIENDLYNAME, NULL, (PBYTE)fname,
+				sizeof(fname), NULL);
+
+			strPortName = portName;
+			strFriendlyName = fname;
+			// remove (COMxx)
+			strFriendlyName = strFriendlyName.substr(0, strFriendlyName.find(TEXT("(COM")));
+
+			m_serialPortInfo.portName = strPortName;
+			m_serialPortInfo.description = strFriendlyName;
+			portInfoList.Add(m_serialPortInfo);
+		}
+
+		if (ERROR_NO_MORE_ITEMS == GetLastError())
+		{
+			bRet = true; // no more item
+		}
+	}
+
+	SetupDiDestroyDeviceInfoList(hDevInfo);
+
+	if (bRet)
+	{
+		for (auto it : portInfoList)
+		{
+			m_serialPortInfo.portName = it.portName;
+			int port = strPortName.size() - 1;
+			while (port >= 0 && isdigit(strPortName[port]))
+			{
+				port--;
+			}
+			std::wstring LocalString = strPortName.substr(port + 1);
+			m_serialPortInfo.port = stoi(LocalString);
+
+			DeviceNameToPort.Add(FSerialPortInfo(m_serialPortInfo.port, m_serialPortInfo.portName.data(), it.description.data()));
+		}
+		return DeviceNameToPort;
+	}
+#else
+#endif
+	return TArray<FSerialPortInfo>();
+}
+
+bool USerialCom::FindSerialPortDevicePortNumber(FString DeviceName, int32& FindComPort, int32 FindFlags)
+{
+	TArray<FSerialPortInfo> LocalFindSerialPort = FindAllSerialPortDevicePortInfo(DeviceName, FindFlags);
+	if (LocalFindSerialPort.Num() > 0)
+	{
+		FindComPort = LocalFindSerialPort[0].Port;
+		return true;
+	}
+	return false;
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
+
+TArray<FSerialPortInfo> USerialCom::FindAllSerialPortDevicePortInfo(FString DeviceName, int32 FindFlags)
+{
+	TArray<FSerialPortInfo> ReturnValue;
+	if (FindFlags > (int32)ESerialDevicesFindFlags::ESDFF_RegularExpressionMatching)
+	{
+		UE_LOG(LogTemp, Error, TEXT("FindFlags is greater than %d,this is a bad value. FindFlags: %d"), ESerialDevicesFindFlags::ESDFF_RegularExpressionMatching, FindFlags);
+		ensure(0);
+		return ReturnValue;
+	}
+	TArray< FSerialPortInfo> LocalFindSerialPort = GetAllSerialPortDevicesAndPortNumbers();
+	if (LocalFindSerialPort.Num() < 0)
+	{
+		return ReturnValue;
+	}
+	for (auto it : LocalFindSerialPort)
+	{
+		//判断是否使用正则表达式匹配字符串
+		if (FindFlags == (int32)ESerialDevicesFindFlags::ESDFF_RegularExpressionMatching)
+		{
+			FRegexPattern Pattern(*DeviceName);
+			FRegexMatcher Matcher(Pattern, it.Description);
+			Matcher.SetLimits(0, it.Description.Len());
+			if (Matcher.FindNext())
+			{
+				ReturnValue.Add(it);
+			}
+		}
+		else
+		{
+			//判断使用全字符匹配
+			if (FindFlags & (int32)ESerialDevicesFindFlags::ESDFF_PartialCharacterMatching)
+			{
+				//判断是否使用部分匹配并判断是否区分大小写
+				if (it.Description.Contains(DeviceName, (FindFlags & (int32)ESerialDevicesFindFlags::ESDFF_CaseSensitive) ? ESearchCase::CaseSensitive : ESearchCase::IgnoreCase))
+				{
+					ReturnValue.Add(it);
+				}
+			}
+			else
+			{
+				if (it.Description.Equals(DeviceName, (FindFlags & (int32)ESerialDevicesFindFlags::ESDFF_CaseSensitive) ? ESearchCase::CaseSensitive : ESearchCase::IgnoreCase))
+				{
+					ReturnValue.Add(it);
+				}
+			}
+
+
+		}
+	}
+
+	return ReturnValue;
+}
+
+USerialCom* USerialCom::FindAndOpenSerialPortByDeviceName(FString DeviceName, bool& bOpened, int32& FindComPort, int32 FindFlags /*= 0x01*/, int32 BaudRate /*= 9600*/)
+{
+	if (FindSerialPortDevicePortNumber(DeviceName, FindComPort, FindFlags))
+	{
+		USerialCom* Serial = OpenComPort(bOpened, FindComPort, BaudRate);
+		return Serial;
+	}
+	return nullptr;
+}
 
 USerialCom* USerialCom::OpenComPort(bool& bOpened, int32 Port, int32 BaudRate)
 {
